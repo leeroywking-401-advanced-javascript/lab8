@@ -46,6 +46,7 @@ function getCategory(request, response, next) {
 }
 
 function postCategories(request, response, next) {
+  console.log(request.body)
   // expects the record that was just added to the database
   categories.post(request.body)
     .then(result => response.status(200).json(result[0]))
