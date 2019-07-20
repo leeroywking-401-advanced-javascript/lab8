@@ -15,6 +15,7 @@ const notFound = require( './middleware/404.js' );
 const app = express();
 const router = require('./middleware/router.js');
 
+app.use('/docs', express.static('docs'));
 
 // App Level MW
 app.use(express.urlencoded({extended:true}));
